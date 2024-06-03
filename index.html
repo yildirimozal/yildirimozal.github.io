@@ -24,6 +24,18 @@
     </style>
 </head>
 <body>
+     <button onclick="toggleFullScreen()">Tam Ekran Modu</button>
+    <script>
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen(); 
+                }
+            }
+        }
+    </script>
     <iframe
   src="https://ozalyildirim.streamlit.app?embed=true"
   style="height: 450px; width: 100%;"
