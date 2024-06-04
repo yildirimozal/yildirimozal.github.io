@@ -7,15 +7,15 @@
     <style>
         body, html {
             height: 100%;
-            margin: 0;
-            display: flex;
+            margin:5;
+    
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0;
         }
         #content {
             width: 100%;
-            height: 100%;
+            height:100%;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex;
@@ -46,10 +46,10 @@
 </head>
 <body>
     <div id="content">
-        <iframe
+        <div id="exam-content"> <iframe
   src="https://ozalquiz1.streamlit.app?embed=true"
   style="height: 100%; width: 100%;"
-></iframe>
+></iframe></div>
         <div id="end-message">Sınav Bitti</div>
     </div>
     <button id="start-fullscreen" onclick="startFullscreen()">Start Fullscreen</button>
@@ -71,10 +71,7 @@
             }
         }
     </script>
-    
 </body>
-   
 </html>
-
-    
-
+       
+       
