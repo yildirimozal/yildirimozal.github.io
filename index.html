@@ -4,14 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullscreen Example</title>
-   
+    <style>
+        body, html {
+            height: 100%;
+            margin:5;
+    
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        iframe {
+    position: fixed;
+    background: #ffffff;
+    border: none;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+        #content {
+            width: 100%;
+            height:100%;
+            background-color: red;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #333;
+        }
+        #ifrm{
+            width: 100%;
+            height:100%; 
+        }
+        #end-message {
+            display: none;
+            font-size: 32px;
+            color: red;
+        }
+        button {
+            position: absolute;
+            bottom: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #start-fullscreen {
+            right: 150px;
+        }
+        #end-fullscreen {
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
-     <button id="start-fullscreen" onclick="startFullscreen()">Start Fullscreen</button>
-    <button id="end-fullscreen" onclick="endFullscreen()">End Fullscreen</button>
-        <iframe src="https://ozalquiz1.streamlit.app?embed=true" height="100%" width="100%"> </div>
-      
-   
+    <div id="content">
+        <div id="exam-content"> <iframe
+  src="https://ozalquiz1.streamlit.app?embed=true"
+  frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"
+></iframe></div>
+        <div id="end-message">Sınav Bitti</div>
+    </div>
+    <button id="start-fullscreen" onclick="startFullscreen()">Sınavı Başlat</button>
+    <button id="end-fullscreen" onclick="endFullscreen()">Sınavı Bitir</button>
 
     <script>
         function startFullscreen() {
@@ -31,5 +86,3 @@
     </script>
 </body>
 </html>
-       
-       
